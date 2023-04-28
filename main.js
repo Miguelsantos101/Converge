@@ -11,6 +11,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
     },
+    show: false,
   });
 
   mainWindow.loadURL(
@@ -29,6 +30,10 @@ function createWindow() {
   // Open the DevTools.
   // mainWindow.webContents.openDevTools();
 
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.show();
+  });
+
   mainWindow.on("closed", function () {
     mainWindow = null;
   });
@@ -37,6 +42,7 @@ function createWindow() {
 }
 
 app.on("ready", createWindow);
+
 
 app.on("window-all-closed", function () {
   if (process.platform !== "darwin") app.quit();
