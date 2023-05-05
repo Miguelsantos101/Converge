@@ -3,18 +3,17 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "ng serve",
-      "type": "chrome",
-      "request": "launch",
-      "preLaunchTask": "npm: start",
-      "url": "http://localhost:4200/"
+      "name": "Converge Dev",
+      "type": "node",
+      "request": "attach",
+      "preLaunchTask": "npm: electron"
+
     },
     {
-      "name": "ng test",
-      "type": "chrome",
-      "request": "launch",
-      "preLaunchTask": "npm: test",
-      "url": "http://localhost:9876/debug.html"
+      "name": "Converge Test",
+      "type": "node",
+      "request": "attach",
+      "preLaunchTask": "npm: electron test",
     }
   ]
 }
