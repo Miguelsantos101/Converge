@@ -5,15 +5,8 @@
     {
       "name": "Converge Dev",
       "type": "node",
-      "request": "attach",
-      "preLaunchTask": "npm: electron"
-
+      "request": "launch",
+      "preLaunchTask": "Electron"
     },
-    {
-      "name": "Converge Test",
-      "type": "node",
-      "request": "attach",
-      "preLaunchTask": "npm: electron test",
-    }
   ]
 }

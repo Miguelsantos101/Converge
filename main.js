@@ -1,8 +1,8 @@
 const { app, BrowserWindow } = require("electron");
-const path = require("path");
 
-async function createWindow() {
+function createWindow() {
   let mainWindow = new BrowserWindow({
+    title: "Converge.net",
     width: 800,
     height: 600,
     webPreferences: {
@@ -12,9 +12,8 @@ async function createWindow() {
     show: false,
   });
 
-  mainWindow.loadURL(path.join(__dirname, `/dist/converge/index.html`));
-  mainWindow.setPosition(0, 0);
-  mainWindow.setMenu(null);
+  mainWindow.loadURL("http://localhost:4200");
+  mainWindow.setPosition(1920, 0);
   mainWindow.maximize();
   mainWindow.focus();
 
