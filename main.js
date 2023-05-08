@@ -18,7 +18,7 @@ function createWindow() {
   mainWindow.focus();
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   mainWindow.once("ready-to-show", () => {
     mainWindow.show();
