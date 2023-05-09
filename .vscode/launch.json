@@ -6,7 +6,8 @@
       "name": "Converge Dev",
       "type": "node",
       "request": "launch",
-      "preLaunchTask": "Electron"
+      "preLaunchTask": "Electron",
+      "postDebugTask": "Terminate All Tasks"
     },
   ]
 }

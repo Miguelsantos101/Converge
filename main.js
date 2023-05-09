@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, Menu } = require("electron");
 
 function createWindow() {
   let mainWindow = new BrowserWindow({
@@ -17,8 +17,8 @@ function createWindow() {
   mainWindow.maximize();
   mainWindow.focus();
 
-  // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // Abrir o DevTools.
+  // mainWindow.webContents.openDevTools();
 
   mainWindow.once("ready-to-show", () => {
     mainWindow.show();
@@ -28,6 +28,50 @@ function createWindow() {
     mainWindow.destroy();
   });
 }
+
+// Criando a barra de menu
+const template = [
+  {
+    label: "Arquivo",
+    submenu: [
+      {
+        label: "Sair",
+        accelerator: "Alt+F4",
+        click: () => {
+          app.quit();
+        },
+      },
+    ],
+  },
+  {
+    label: "Alterar Município",
+    click: () => {
+      console.log("Clicou em Alterar Município");
+    },
+  },
+  {
+    label: "Ajuda",
+    submenu: [
+      {
+        label: "Ajuda",
+        accelerator: "F1",
+        click: () => {
+          console.log("Clicou em Ajuda");
+        },
+      },
+      {
+        label: "Sobre",
+        accelerator: "",
+        click: () => {
+          console.log("Clicou em Sobre");
+        },
+      },
+    ],
+  },
+];
+
+const menu = Menu.buildFromTemplate(template);
+Menu.setApplicationMenu(menu);
 
 app.whenReady().then(() => {
   createWindow();
