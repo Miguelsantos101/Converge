@@ -1,12 +1,38 @@
-<main>
-  <div id="arquivo" class="arquivo col-md-24">
-    <label>Nome do Arquivo:</label>
-    <input type="text" />
-    <button type="button" class="btn btn-secondary">Procurar</button>
-    <button type="button" class="btn btn-secondary">Processar</button>
-  </div>
+<main class="row">
+  <section>
+    Arquivo
+    <div class="row">
+      <div class="col-md-24 border">
+        <div class="form-group">
+          <div class="col-md-6">
+            <label>Nome do Arquivo:</label>
+          </div>
+          <div class="col-md-6">
+            <input type="text" />
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-secondary">Procurar</button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-secondary">Processar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div id="detalhes" class="detalhes"></div>
+    Detalhes do Arquivo
+    <div class="border">
+      Detalhes do Lote
+      <div class="detalhes-row">
+        <div class="col-md-10"></div>
+      </div>
+    </div>
 
-  <div id="botoes" class="botoes"></div>
+    <div class="border">
+      <div class="botoes">
+        <button type="button" class="btn btn-secondary">Apagar</button>
+        <button type="button" class="btn btn-secondary">Enviar Lote</button>
+      </div>
+    </div>
+  </section>
 </main>

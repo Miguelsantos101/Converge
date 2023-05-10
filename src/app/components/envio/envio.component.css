@@ -1,11 +1,19 @@
 * {
-  color: #000000;
-  text-decoration-color: #000000;
-  gap: 20px;
+  display: flex;
+  margin: 0.1rem;
+  padding: 0.1rem;
 }
 
-.arquivo {
-  display: flex;
+section {
+  flex-direction: column;
+}
+
+div.arquivo,
+div.detalhes,
+div.botoes {
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 20px;
 }
